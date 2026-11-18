@@ -18,20 +18,34 @@
 
 ## 시작하기
 
+### 준비물
+
+- [Git](https://git-scm.com)
+- [Bun](https://bun.sh) 1.3.6 이상 (`bun -v`로 확인). 이 저장소는 `bun.lock`을 쓰므로 npm이나 yarn 대신 bun으로 설치합니다.
+- [Node.js](https://nodejs.org) 20.9 이상 (`node -v`로 확인). Next.js 16이 요구하는 버전입니다.
+
+### 설치와 실행
+
 ```bash
+git clone <저장소 주소>
+cd todo-tutorial
 bun install
 bun dev
 ```
 
-개발 서버는 기본적으로 [http://localhost:3000](http://localhost:3000) 에서 열립니다.
+1. `git clone`과 `cd`로 저장소를 받아 폴더로 들어갑니다.
+2. `bun install`로 의존성을 설치합니다.
+3. `bun dev`로 개발 서버를 켭니다. 터미널에 `Ready`가 보이면 브라우저에서 [http://localhost:3000](http://localhost:3000) 을 엽니다. 3000번 포트가 이미 쓰이면 Next.js가 다른 포트를 골라 터미널에 알려 줍니다.
+4. 서버를 끄려면 터미널에서 `Ctrl+C`를 누릅니다.
 
-자주 쓰는 스크립트:
+### 자주 쓰는 스크립트
 
 ```bash
 bun run build      # 프로덕션 빌드
-bun run start      # 빌드 결과 실행
+bun run start      # 빌드 결과 실행 (먼저 build가 필요합니다)
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
+bun run test       # Vitest 테스트 1회 실행
 bun run format     # Prettier 포맷팅
 ```
 
